@@ -1,0 +1,56 @@
+<!--pages/orderFrist/orderFrist.wxml-->
+<view class="orderFrist">
+  <view class="nav"></view>
+  <view class="body">
+    <view class="noOrder" wx:if="{{orderFlag}}">
+      <image src="/pages/imgs/orderFrist.jpg"></image>
+      <view>近期无点单记录</view>
+      <button class="button button-3d button-action button-pill" bindtap="jump" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="margin-left: 50%;transform: translateX(-50%);">去点单</button>
+    </view>
+    <view class="orderList">
+      <scroll-view scroll-y="true" style="height:1100rpx">
+        <view wx:for="{{orderList}}" wx:key="*this" class="theOrder" data-theOrder="{{item}}" bindtap="orderDetail">
+          <view><text>订单号:{{item.orderNumber}}</text><text>共{{item.count}}种</text></view>
+          <view><text>{{item.bName}}</text><text>￥价格:{{item.money}}</text></view>
+          <view style="margin-left:60rpx;color:green"><text>{{item.orderStatus}}</text></view>
+        </view>
+      </scroll-view>
+      
+      <van-popup show="{{ show }}"
+      closeable
+      round
+      bind:close="onClose"><view class="content">
+        <view class="zw"></view>
+        <view wx:for="{{orderdetail}}" wx:key="*this" class="thedList">
+          <view class="left">
+            <image src="{{item.imageUrl}}"></image>            
+          </view>
+          <view class="right">
+            <view class="name">{{item.mName}}</view>
+            <view class="price">{{item.selectAttr}}</view>
+            <view class="price">单价：{{item.payMoney}} (元)</view>
+            <view class="capnum">数量：{{item.number}} (杯)</view>            
+          </view>
+        </view>
+        <view class="mianNew">
+          <view>
+            商家名: {{TheOrder.bName}}
+          </view>
+          <view>
+            订单号: {{TheOrder.orderNumber}}
+          </view>
+          <view>
+            订单时间: {{TheOrder.createTime}}
+          </view>
+          <view>
+            总价:{{TheOrder.money}} (元)
+          </view>
+        </view>
+        <view class="button button-3d button-action button-pill" bindtap="onClose" style="margin-left: 50%;transform: translateX(-50%);margin-top:50rpx;margin-bottom:50rpx">确定</view>
+      </view></van-popup>
+
+      <button class="button button-3d button-action button-pill" open-type="getUserInfo" bindgetuserinfo="getUserInfo" bindtap="jump" style="margin-top:30rpx; margin-left: 50%;transform: translateX(-50%);">去点单</button>
+    </view>
+  </view>
+  <view class="bar"></view>
+</view>

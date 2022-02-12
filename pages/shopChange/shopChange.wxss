@@ -1,0 +1,313 @@
+page{
+  background: whitesmoke;
+}
+.nav .search{
+  width: 100%;
+  height: 90rpx;
+  background-color: white;
+  position: relative;
+}
+.nav .search input{
+  border: none;
+  height: 80rpx;
+  width: 80%;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  background-color: whitesmoke;
+  border-radius: 40rpx;
+  padding-left: 90rpx;
+}
+.nav .search .searchicon{
+  position: absolute;
+  z-index: 999;
+  top: 18rpx;
+  left: 45rpx;
+}
+.nav .search .searchicon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+.swiper-tab{
+  background: white;
+  width: 100%;
+  border-bottom: 2rpx solid #ccc;
+  text-align: center;
+  height: 88rpx;
+  line-height: 88rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+}
+.swiper-tab-item{
+  width: 50%; 
+  color:#434343;
+}
+.active{
+  color:orange;
+  border-bottom: 4rpx solid orange;
+}
+swiper-item .shop .map{
+  width: 100%;
+  height: 480rpx;
+}
+swiper-item .shop .map map{
+  width: 100%;
+  height: 480rpx;
+}
+swiper-item .shop .fristAddress{
+  width: 96%;
+  margin-left: 2%;
+  height: 520rpx;
+  background:white;
+  margin-top: 20rpx;
+}
+swiper-item .shop .fristAddress .fristAddressLeft {
+  display: inline-block;
+  width: 78%;
+  vertical-align: top;
+}
+swiper-item .shop .fristAddress .fristAddressLeft .leftText{
+  margin-top: 35rpx;
+  margin-left: 30rpx;
+}
+
+swiper-item .shop .fristAddress .fristAddressLeft .leftText text:nth-child(3){
+  color: gray;
+  font-size: 14px;
+}
+swiper-item .shop .fristAddress .fristAddressLeft .leftText text:nth-child(5){
+  color: gray;
+  font-size: 14px;
+  display: block;
+  margin-top: 10rpx;
+}
+swiper-item .shop .fristAddress .fristAddressLeft .timeChance{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+swiper-item .shop .fristAddress .fristAddressLeft .timeChance radio-group {
+  margin-top: 20rpx;
+}
+swiper-item .shop .fristAddress .fristAddressLeft .mid{
+  width: 100%;
+  height: 30rpx;
+}
+swiper-item .shop .fristAddress .line{
+  display: inline-block;
+  width: 0.5%;
+  height: 260rpx;
+  background: whitesmoke;
+  margin-top: 100rpx;
+}
+swiper-item .shop .fristAddress .fristAddressRight {
+  display: inline-block;
+  width: 21%;
+  vertical-align: top;
+}
+swiper-item .shop .fristAddress .fristAddressRight
+.distance {
+  font-size: 12px;
+  color: gray;
+  margin-top: 40rpx;
+}
+swiper-item .shop .fristAddress .fristAddressRight
+.phone{
+  margin-top: 40rpx;
+  width: 100%;
+}
+swiper-item .shop .fristAddress .fristAddressRight
+.phone image{
+  margin-left: 55%;
+  transform: translateX(-50%);
+  width: 55rpx;
+  height: 55rpx;
+}
+swiper-item .shop .fristAddress .fristAddressRight
+.like{
+  margin-top: 40rpx;
+  width: 100%;
+}
+swiper-item .shop .fristAddress .fristAddressRight
+.like image{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 55rpx;
+  height: 55rpx;
+}
+swiper-item .shop .fristAddress .fristAddressRight
+.address{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 60rpx;
+}
+swiper-item .shop .fristAddress .fristAddressRight
+.address image{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 55rpx;
+  height: 55rpx;
+}
+swiper-item .shop .fristAddress .button{
+  margin-top: 20rpx;
+  width: 75%;
+  height: 75rpx;
+  border-radius: 37.5rpx;
+  background: orange;
+  color: white;
+  margin-left: 12.5%;
+  line-height: 75rpx;
+  text-align: center;
+}
+swiper-item .shop .TheAddress{
+  width: 96%;
+  margin-left: 2%;
+  height: 200rpx;
+  background:white;
+  margin-top: 10rpx;
+}
+.TheAddress .fristAddressLeft {
+  display: inline-block;
+  width: 78%;
+  vertical-align: top;
+}
+.TheAddress .fristAddressLeft .leftText{
+  margin-top: 35rpx;
+  margin-left: 30rpx;
+}
+
+.TheAddress .fristAddressLeft .leftText text:nth-child(3){
+  color: gray;
+  font-size: 14px;
+}
+.TheAddress .fristAddressLeft .leftText text:nth-child(5){
+  color: gray;
+  font-size: 14px;
+  display: block;
+  margin-top: 10rpx;
+}
+.TheAddress .fristAddressRight {
+  display: inline-block;
+  width: 21%;
+  vertical-align: top;
+}
+.TheAddress .fristAddressRight
+.distance {
+  font-size: 12px;
+  color: gray;
+  margin-top: 40rpx;
+}
+ .bottom{
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  color: gray;
+  text-align: center;
+
+}
+.join .fristAddress{
+  width: 96%;
+  margin-left: 2%;
+  height: 480rpx;
+  background:white;
+  margin-top: 20rpx;
+}
+.join .fristAddress .fristAddressLeft {
+  display: inline-block;
+  width: 78%;
+  vertical-align: top;
+}
+.join .fristAddress .fristAddressLeft .leftText{
+  margin-top: 35rpx;
+  margin-left: 30rpx;
+}
+
+.join .fristAddress .fristAddressLeft .leftText text:nth-child(3){
+  color: gray;
+  font-size: 14px;
+}
+.join .fristAddress .fristAddressLeft .leftText text:nth-child(5){
+  color: gray;
+  font-size: 14px;
+  display: block;
+  margin-top: 10rpx;
+}
+.join .fristAddress .fristAddressLeft .timeChance{
+  margin-top: 30rpx;
+  margin-left: 30rpx;
+}
+.join .fristAddress .fristAddressLeft .timeChance radio-group {
+  margin-top: 20rpx;
+}
+.join .fristAddress .fristAddressLeft .mid{
+  width: 100%;
+  height: 30rpx;
+}
+.join .fristAddress .line{
+  display: inline-block;
+  width: 0.5%;
+  height: 260rpx;
+  background: whitesmoke;
+  margin-top: 100rpx;
+}
+.join .fristAddress .fristAddressRight {
+  display: inline-block;
+  width: 21%;
+  vertical-align: top;
+}
+.join .fristAddress .fristAddressRight
+.distance {
+  font-size: 12px;
+  color: gray;
+  margin-top: 40rpx;
+}
+.join .fristAddress .fristAddressRight
+.phone{
+  margin-top: 40rpx;
+  width: 100%;
+}
+.join .fristAddress .fristAddressRight
+.phone image{
+  margin-left: 55%;
+  transform: translateX(-50%);
+  width: 55rpx;
+  height: 55rpx;
+}
+.join .fristAddress .fristAddressRight
+.like{
+  margin-top: 40rpx;
+  width: 100%;
+}
+.join .fristAddress .fristAddressRight
+.like image{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 55rpx;
+  height: 55rpx;
+}
+.join .fristAddress .fristAddressRight
+.address{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 60rpx;
+}
+.join .fristAddress .fristAddressRight
+.address image{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 55rpx;
+  height: 55rpx;
+}
+.join .fristAddress .button{
+  margin-top: 20rpx;
+  width: 75%;
+  height: 75rpx;
+  border-radius: 37.5rpx;
+  background: orange;
+  color: white;
+  margin-left: 12.5%;
+  line-height: 75rpx;
+  text-align: center;
+}
+.join image{
+  width: 100%;
+}

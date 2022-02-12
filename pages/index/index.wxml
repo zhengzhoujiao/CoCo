@@ -1,0 +1,71 @@
+<view class="index">
+  <view class="nav">
+    <swiper indicator-dots="true" autoplay="true" interval="3000">
+    <view wx:for="{{images}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item.imageUrl}}" mode="widthFix"></image>
+      </swiper-item>
+    </view>
+    </swiper>
+  </view>
+  <view class="body">
+    <view class="top">
+      <view class="topLeft">
+        <button class="theCeil" bindtap="toshop" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="margin:0">
+          <view>
+            <image src="/pages/imgs/奶茶.svg"></image>            
+          </view>
+          <view>自助点单</view>
+          <view>预约免排队</view>
+        </button>
+        <view class="ceil">
+          <view>
+            <image src="/pages/imgs/优惠券.svg"></image>            
+          </view>
+          <view>超值优惠</view>
+          <view>囤卷福利多</view>
+        </view>
+      </view>
+      <view class="topMid"></view>
+      <view class="topRight">
+        <view>点亮计划</view>
+        <view>多单有礼 满五即赠</view>
+        <view>
+          <image src="/pages/imgs/five.PNG"></image>
+        </view>
+        <view>再下5单即可解锁券包</view>
+        <view>每天限点亮1次</view>
+      </view>
+    </view>
+    <view class="mid">
+      <view class="midAction">最新活动:</view>
+      <view class="swiper-view">
+        <swiper class="swiper_container" vertical="true" autoplay="true" circular="true" interval="2000">
+          <block wx:for="{{news}}" wx:key="*this">
+            <swiper-item>
+              <view class="swiper_item" data-theNew="{{item}}" bindtap="jumpNew">{{item.title}}</view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view>
+    <view class="bottom">
+      <view class="ceil">
+        <view>
+            <image src="/pages/imgs/积分礼品.svg"></image>            
+          </view>
+          <view>礼品卡</view>
+          <view>请TA和一杯</view>
+      </view>
+      <view class="ceil" bindtap="jumpNew">
+          <view>
+            <image src="/pages/imgs/日历.svg"></image>            
+          </view>
+          <view>季节限定</view>
+          <view>围观当季指定饮品</view>
+      </view>
+    </view>
+  </view>
+  <view class="bar">
+  </view>
+</view>

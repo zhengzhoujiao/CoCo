@@ -1,0 +1,117 @@
+<view class="index">
+  <view class="nav">
+    <image src="/pages/imgs/banner/醇黑濃情系列.jpg"></image>
+    <view class="headerAS">
+      <view class="addressIcon">
+        <image src="/pages/imgs/地址.svg"></image>
+      </view>
+      <view class="address">
+        <view>{{shopName}}</view>
+        <view>{{address}}</view>
+      </view>
+      <!-- <view class="search" bindtap="search">
+        <image src="/pages/imgs/搜索--1.svg"></image>
+      </view> -->
+    </view>
+  </view>
+  <view class="body">
+    <view class="bodyLeft">
+      <scroll-view scroll-y="true">
+        <view wx:for="{{KindList}}" wx:key="*this" data-hash="{{item.hash}}" bindtap="jump" style="background:{{item.hash==toView ? 'whitesmoke':'white'}}">
+          <image src="{{item.icon}}"></image>
+        {{item.name}}</view>
+        <view style="height:80rpx"></view>
+      </scroll-view>
+    </view>
+    <view class="bodyRight" >
+      <scroll-view scroll-y="true" scroll-with-animation="true" scroll-into-view="{{toView}}">
+        <view class="card" wx:for="{{shopList}}" wx:key="*this" id="{{item.hash}}">
+          <image src="{{item.imageUrl}}"></image>
+          <view class="cardRight">
+            <view>{{item.name}}</view>
+            <view>￥{{item.oriPrice}}</view>
+            <view data-theCap="{{item}}" bindtap="add">+</view>
+          </view>
+        </view>
+      </scroll-view>
+    </view>
+    <view class="theCar">
+      <image bindtap="carlistDetail" src="/pages/imgs/bz.jpg"></image>
+      <view wx:if="{{shopnum>0}}" class="qiu">{{shopnum}}</view>
+      <view class="left">
+        ￥{{PriceSum}}
+      </view>
+      <view class="right" style="background:{{CarList.length>0 ? 'orange':'gray'}}" bindtap="topay">
+        去结算
+      </view>
+    </view>
+    <!-- 购物车弹窗 -->
+    <van-popup show="{{ showTwo }}" closeable close-icon="close" position="bottom" custom-style="height: 50%"
+      bind:close="onCloseTwo" >
+      <view class="youChange">您的选择</view>
+      <view class="carlist" wx:for="{{CarList}}" wx:for-index="idx" wx:key="*this">
+        <view class="left">
+          <view class="title">{{item.kindName}}</view>
+          <view class="attr">{{item.attr}}</view>
+          <view class="price">￥{{item.newPrice}}</view>
+        </view>
+        <view class="right">
+          <view class="jian" data-item="{{item}}" data-idx="{{idx}}" bindtap="carCut">-</view>
+          <view class="num">{{item.number}}</view>
+          <view class="add" data-item="{{item}}" data-idx="{{idx}}" bindtap="carAdd">+</view>
+        </view>
+      </view>
+      <view style="height:280rpx"></view>
+    </van-popup>
+    <!-- 商品详情弹窗 -->
+    <van-popup style="z-index: 999" show="{{ show }}"
+      closeable
+      round
+      bind:close="onClose"><view class="content">
+        <view class="bcard" wx:for="{{theCap}}" wx:key="*this" id="{{item.id}}">
+          <image src="{{theCap[0].imageUrl}}"></image>
+          <view class="cardRight">
+            <view>{{item.kindName}}</view>
+            <view>{{item.intro}}</view>
+          </view>
+        </view>
+        <view class="tofor" wx:for="{{theCapDetail}}" wx:key="*this">
+          <view>{{item.name}}</view>
+          <view class="property" wx:for="{{item.detail}}"  wx:key="*this" data-theprop="{{item}}" style="background:{{item.checked ? 'orange':'whitesmoke'}}" bindtap="changeadd">{{item.property}}</view>
+        </view>
+        <view style="margin-left:20rpx">￥{{capPrice}}</view>
+        <view style="margin-left:20rpx">{{seltectedStr}}</view>
+        <view class="bottom">
+          <view class="line"></view>
+          <view class="button button-3d button-action button-pill" bindtap="addCar" style="margin-left: 55%;margin-top:50rpx;margin-bottom:50rpx">加入购物车</view>          
+        </view>
+      </view>
+    </van-popup>
+    <!-- 搜索弹窗 -->
+    <van-popup style="z-index: 997" show="{{ showThree }}"
+      closeable
+      round
+      bind:close="onCloseThree">
+      <view class="contentTwo">
+        <view class="">
+          <image class="searchImage" src="/pages/imgs/搜索--1.svg"></image>
+          <input class="searchInput" placeholder="输入想喝的奶茶" type="text"/>
+          <text class="txtSearch">搜索</text>
+        </view>
+        <view style="height:50rpx"></view>
+        <scroll-view scroll-y="true" scroll-with-animation="true" style="height:800rpx">
+          <view class="bcard" wx:for="{{SearchList}}" wx:key="*this" id="{{item.id}}">
+          <image :src="{{item.imageUrl}}"></image>
+          <view class="cardRight">
+            <view>{{item.kindName}}</view>
+            <view>￥{{item.price}}</view>
+            <view data-theCap="{{item}}" bindtap="add">+</view>
+          </view>
+        </view>
+        </scroll-view>
+      </view>
+    </van-popup>
+  </view>
+  <view class="bar">
+  </view>
+</view>

@@ -1,0 +1,138 @@
+/* pages/orderFrist/orderFrist.wxss */
+@import '/content/css/button.wxss';
+page{
+  background-color: #F1F1F1;
+}
+.orderFrist .body .noOrder image{
+  width: 100%;
+  margin-top: 350rpx;
+}
+.orderFrist .body .noOrder view:nth-child(2){
+  width: 100%;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+}
+.orderFrist .body .noOrder view:nth-child(3){
+  border: 1px solid orangered;
+  width: 270rpx;
+  height: 60rpx;
+  border-radius: 30rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  color: orange;
+  text-align: center;
+  line-height: 60rpx;
+  margin-top: 60rpx;
+}
+.orderFrist .body .orderList{
+  margin-top: 30rpx;
+}
+.orderFrist .body .orderList .theOrder{
+  width: 92%;
+  height: 220rpx;
+  background-color: white;
+  margin-left: 4%;
+  margin-top: 30rpx;
+  border-radius: 30rpx;
+  background: #e6eef4;
+  box-shadow:  20px 20px 60px #c4cacf, 
+             -20px -20px 60px #ffffff;
+  border: 3px orange solid;
+}
+.orderFrist .body .orderList .theOrder view:nth-child(1){
+  color: gray;
+}
+.orderFrist .body .orderList .theOrder view:nth-child(1) text:nth-child(1){
+  margin-left: 50rpx;
+  display: inline-block;
+  margin-top: 30rpx;
+}
+.orderFrist .body .orderList .theOrder view:nth-child(1) text:nth-child(2){
+  float: right;
+  margin-top: 30rpx;
+  margin-right: 50rpx;
+}
+.orderFrist .body .orderList .theOrder view:nth-child(2){
+  margin-top: 30rpx;
+}
+.orderFrist .body .orderList .theOrder view:nth-child(2) text:nth-child(1){
+  margin-left: 50rpx;
+  display: inline-block;
+  font-size: 18px;
+}
+.orderFrist .body .orderList .theOrder view:nth-child(2) text:nth-child(2){
+  float: right;
+  margin-right: 50rpx;
+  color: gray;
+}
+.orderFrist .body .orderList .theOrder view:nth-child(3){
+  margin-top: 30rpx;
+}
+.content{
+  width: 700rpx;
+  height: 1000rpx;
+}
+.content .zw{
+  height: 40rpx;
+}
+.content .thedList{
+  width: 92%;
+  margin-left: 4%;
+  height: 230rpx;
+  border-radius: 40px;
+  background: #e6eef4;
+  box-shadow:  20px 20px 60px #c4cacf, 
+             -20px -20px 60px #ffffff;
+  margin-top: 20rpx;
+}
+.content .thedList .left{
+  width: 50%;
+  float: left;
+}
+.content .thedList .right{
+  width: 50%;
+  float: right;
+}
+.content .thedList .left image{
+  width: 230rpx;
+  height: 230rpx;
+  margin-left: 30rpx;
+}
+.content .thedList .right .name{
+  float: right;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 15rpx;
+  margin-right: 60rpx;
+  text-align: right;
+}
+.content .thedList .right .price{
+  float: right;
+  width: 100%;
+  margin-top: 15rpx;
+  margin-right: 60rpx;
+  text-align: right;
+}
+.content .thedList .right .capnum{
+  float: right;
+  width: 100%;
+  margin-top: 15rpx;
+  margin-right: 60rpx;
+  text-align: right;
+}
+.content .mianNew{
+  overflow: hidden;
+  width: 92%;
+  margin-top: 60rpx;
+  height: 300rpx;
+  background-color: white;
+  margin-left: 4%;
+  border-radius: 30px;
+  box-shadow: inset 20px 20px 60px whitesmoke, 
+            inset -20px -20px 60px #ffffff;
+}
+.content .mianNew view{
+  margin-top: 30rpx;
+  margin-left: 50rpx;
+}

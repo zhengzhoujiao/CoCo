@@ -1,0 +1,6 @@
+<!--pages/news/news.wxml-->
+<view class="news">
+  <view class="title">{{title}}</view>
+  <view class="date">{{createTime}}</view>
+  <image style="width:100%" mode="widthFix" class="newsPic" src="{{imageUrl}}"></image>
+</view>

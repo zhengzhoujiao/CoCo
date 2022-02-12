@@ -1,0 +1,167 @@
+/* pages/pay/pay.wxss */
+@import '/content/css/button.wxss';
+@import '/iconfont/iconfont.wxss';
+page{
+  background: whitesmoke;
+}
+.pay .nav{
+  margin-top: 20rpx;
+  width: 96%;
+  height: 230rpx;
+  margin-left: 2%;
+  background: white;
+  border-radius: 30rpx;
+  overflow: hidden;
+}
+.pay .nav .address{
+  width: 90%;
+  margin-left: 5%;
+  height: 100rpx;
+  margin-top: 25rpx;}
+.pay .nav .address .left{
+  display: inline-block;
+  color: orange;
+}
+.pay .nav .address .left view{
+  height: 100rpx;
+  line-height: 100rpx;
+  font-size: 20px;
+}
+.pay .nav .address .right{
+  display: inline-block;
+  height: 100rpx;
+  margin-left: 20rpx;
+  vertical-align: top;
+}
+.pay .nav .address .right .top{
+  font-size: 18px;
+}
+.pay .nav .address .right .bottom{
+  margin-top: 20rpx;
+  color: gray;
+}
+.pay .nav .time{
+  width: 90%;
+  margin-left: 5%;
+  margin-top: 30rpx;
+}
+.pay .nav .time .left{
+  display: inline-block;
+  margin-left: 20rpx;
+  font-size: 20px;
+}
+.pay .nav .time .right{
+  float: right;
+  color:orange
+}
+.pay .body{
+  border-radius: 30rpx;
+  width: 96%;
+  margin-left: 2%;
+  background-color: white;
+}
+.pay .body .orderDetial{
+
+  margin-top: 25rpx;
+  width: 90%;
+  margin-left: 5%;
+  background-color: white;
+  overflow: hidden;
+}
+.pay .body .orderDetial .title{
+  font-size: 20px;
+  margin-top: 50rpx;
+}
+.pay .body .orderDetial .card{
+  margin-top: 30rpx;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+}
+.pay .body .orderDetial .card .capName{
+  flex:3;
+  display: inline-block;
+}
+.pay .body .orderDetial .card .capName .top{
+  font-size: 20px;
+}
+.pay .body .orderDetial .card .capName .bottom{
+  font-size: 14px;
+  color: gray;
+  margin-top: 10rpx;
+}
+.pay .body .orderDetial .card .capNum{
+  flex:1;
+  display: inline-block;
+  line-height: 100rpx;
+  font-size: 20px;
+  color: gray;
+}
+.pay .body .orderDetial .card .capPrice{
+  flex:1;
+  display: inline-block;
+  line-height: 100rpx;
+  text-align: right;
+}
+.pay .body .orderDetial .price{
+  width: 100%;
+  height: 100rpx;
+  margin-top: 30rpx;
+  border-bottom: 1px solid whitesmoke;
+  display: flex;
+}
+.pay .body .orderDetial .price .left{
+  flex:7;
+  text-align: right;
+  line-height: 100rpx;
+  color: gray;
+}
+.pay .body .orderDetial .price .right{
+  flex: 3;
+  text-align: right;
+  font-size: 18px;
+  line-height: 100rpx;
+}
+.pay .body .orderDetial .quan{
+  line-height: 100rpx;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  border-bottom: 1px solid whitesmoke;
+}
+.pay .body .orderDetial .quan view:nth-child(1){
+  flex:3;
+  color: orange;
+  font-size: 20px;
+}
+.pay .body .orderDetial .quan view:nth-child(2){
+  flex:7;
+  font-size: 20rpx;
+  text-align: right;
+}
+.pay .body .orderDetial .quan view:nth-child(2) text:nth-child(1){
+  color: orange;
+  font-size: 18px;
+}
+.pay .body .orderDetial .quan view:nth-child(2) text:nth-child(2){
+  color: gray;
+  font-size: 18px;
+}
+.pay .body .orderDetial .zb{
+  width: 100%;
+  margin-top: 30rpx;
+} 
+.pay .body .orderDetial .zb view:nth-child(1){
+  color: orange;
+  font-size: 20px;
+}
+.pay .body .orderDetial .zb textarea{
+  width: 100%;
+  height: 120rpx;
+  margin-top: 25rpx;
+  margin-bottom: 135rpx;
+  border: 1px solid whitesmoke;
+  border-radius: 25rpx;
+  padding-top: 15rpx;
+  padding-left: 20rpx;
+}

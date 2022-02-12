@@ -1,0 +1,54 @@
+<!--pages/pay/pay.wxml-->
+<view class="pay">
+  <view class="nav">
+    <view class="address">
+      <view class="left">
+        <view class="iconfont icon-dizhi"></view>
+      </view>
+      <view class="right">
+        <view class="top">{{shopname}}</view>
+        <view class="bottom">河南省洛阳市涧西区上海市场</view>
+      </view>
+    </view>
+    <view class="time">
+      <view class="iconfont icon-shijian" style="color:orange;display:inline-block;font-size:20px;vertical-align: top;"></view>
+      <view class="left">取单时间</view>
+      <view class="right">{{theTime}}</view>
+    </view>
+  </view>
+  <view class="body">
+    <view class="orderDetial">
+      <view class="title">订单详情</view>
+      <view wx:for="{{orderList}}" wx:key="*this" class="card">
+        <view class="capName">
+          <view class="top">{{item.kindName}}</view>
+          <view class="bottom">{{item.attr}}</view>
+        </view>
+        <view class="capNum">
+          × {{item.number}}
+        </view>
+        <view class="capPrice">
+          ￥{{item.newPrice}}
+        </view>
+      </view>
+      <view class="price">
+        <view class="left">共{{capnum}}件</view>
+        <view class="right">共计￥{{pricenum}}</view>
+      </view>
+      <view class="quan">
+        <view class="iconfont icon-youhuiquan2">
+          <text style="color:black"> CoCo券</text>
+          </view>
+        <view class="thequan">
+          <text>没有可用券</text>
+          <text>></text>
+        </view>
+      </view>
+      <view class="zb">
+        <view class="iconfont icon-xiaoxi"><text style="color:black"> 备注</text></view>
+        <textarea placeholder="若有其他要求,请注备说明" name="" id="" ></textarea>
+      </view>
+      <view class="button button-3d button-action button-pill" bindtap="onClose" style="margin-left: 60%;transform: translateX(-50%);margin-top:50rpx;margin-bottom:50rpx" bindtap="topay">下单</view>
+    </view>
+  </view>
+</view>

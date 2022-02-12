@@ -1,0 +1,67 @@
+/* pages/own/owm.wxss */
+page{
+  background: whitesmoke;
+}
+.nav .userinfo{
+  width: 260rpx;
+  height: 260rpx;
+  border-radius: 130rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 80rpx;
+}
+.nav .userinfoname{
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+  margin-top: 30rpx;
+}
+.nav .synchronization{
+  width: 220rpx;
+  height: 56rpx;
+  color: orange;
+  border: 2px orange solid;
+  border-radius: 28rpx;
+  line-height: 56rpx;
+  text-align: center;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  margin-top: 30rpx;
+  font-size: 14px;
+}
+.body{
+  width: 92%;
+  margin-left: 4%;
+  margin-top: 60rpx;
+}
+.body .line{
+  position: relative;
+  width: 100%;
+  height: 120rpx;
+  background: white;
+  border-bottom: 1px whitesmoke solid;
+  line-height: 120rpx;
+}
+.body .line .bodyLeft{
+  display: inline-block;
+  margin-left: 30rpx;
+}
+.body .line .bodyMid{
+  display: inline-block;
+}
+.body .line .bodyMid image{
+  vertical-align: middle;
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 40rpx;
+}
+.body .line .bodyRight{
+  display: inline-block;
+}
+.body .line .bodyRight view{
+  color: orange;
+  font-size: 22px;
+  position: absolute;
+  right: 30rpx;
+  top: 0;
+}

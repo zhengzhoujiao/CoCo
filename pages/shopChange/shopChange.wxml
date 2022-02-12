@@ -1,0 +1,144 @@
+<!--pages/shopChange/shopChange.wxml-->
+<view class="shopChange">
+  <view class="nav">
+    <view class="search">
+      <view class="searchicon">
+        <image src="/pages/imgs/搜索--1.svg"></image>
+      </view>
+      <input class="weui-input" auto-focus placeholder="输入地址可以查找门店哦！" />
+    </view>
+  </view>
+  <view class="body">
+    <view class="swiper-tab">
+      <view class="swiper-tab-item {{currentTab==0?'active':''}}" data-current="0" bindtap="clickTab">定位附近门店</view>
+      <view class="swiper-tab-item {{currentTab==1?'active':''}}" data-current="1" bindtap="clickTab">常去及收藏</view>
+    </view>
+
+    <swiper current="{{currentTab}}"  duration="300" bindchange="swiperTab" style="height:1250rpx">
+      <swiper-item catchtouchmove="stopTouchMove">
+        <view class="shop">
+          <view class="map">
+            <map scale="15" markers="{{markers}}" longitude="{{shoplng}}" show-location="true" latitude="{{shoplat}}" name="shopList">
+              <cover-view slot="callout">
+                <cover-view wx:for="{{markers}}" wx:key="*this" marker-id="{{item.id}}"></cover-view>
+              </cover-view>
+            </map>
+          </view>
+          <scroll-view scroll-y="true" scroll-top='{{topNum}}'  style="height:800rpx">
+            <view class="fristAddress" wx:for="{{fristShop}}" wx:key="*this">
+              <view class="fristAddressLeft" >
+                <view class="leftText">
+                  <text>{{item.name}}</text>
+                  <text>\n</text>
+                  <text>{{item.address}}</text>
+                  <text>\n</text>
+                  <text>营业时间: {{item.beginTime}}-{{item.endTime}}</text> </view>
+                <view class="timeChance">
+                  <view>到店自取:</view>
+                  <radio-group bindchange="chance">
+
+                    <radio id="now" value="now" checked="checked"></radio>
+                    <label for="now">支付成功后店内取单</label>
+                    <text>\n</text>
+                    <view class="mid"></view>
+                    <view class="timePk">
+                      <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
+                        <view class="picker">
+                          <radio id="after" value="{{time}}"></radio><label for="after">预约稍晚时间到店取单</label>
+                        </view>
+                      </picker>
+                    </view>
+                  </radio-group>
+                </view>
+              </view>
+              <view class="line"></view>
+              <view class="fristAddressRight">
+                <view class="distance">距离:{{item.distance}}km</view>
+                <view class="phone">
+                  <image src="/pages/imgs/电  话.svg"></image>
+                </view>
+                <view class="like"
+                data-theshop='{{item}}' bindtap="likeShop">
+                <!-- /pages/imgs/心爱心.svg -->
+                  <image wx:if="{{item.isStar}}" src="/pages/imgs/心爱心.svg"></image>
+                  <image wx:else src="/pages/imgs/心 爱心.svg"></image>
+                </view>
+                <view class="address">
+                  <image src="/pages/imgs/地址.svg"></image>
+                </view>
+              </view>
+              <view class="button" bindtap="toDrink">
+                选择饮品
+              </view>
+            </view>
+            <view wx:for="{{shopList}}" wx:key="*this" data-changeShop='{{item}}' bindtap="changeThis" class="TheAddress">
+              <view class="fristAddressLeft" >
+                <view class="leftText">
+                  <text>{{item.name}}</text>
+                  <text>\n</text>
+                  <text>{{item.address}}</text>
+                  <text>\n</text>
+                  <text>营业时间: {{item.beginTime}}-{{item.endTime}}</text> </view>
+              </view>
+              <view class="fristAddressRight">
+                <view class="distance">距离:{{item.distance}}km</view>
+              </view>
+            </view>
+            <view class="bottom">没有更多了</view>
+          </scroll-view>
+        </view>
+      </swiper-item>
+      <swiper-item catchtouchmove="stopTouchMove">
+        <view class="join">
+          <view wx:if="{{pdflage}}">
+            <image src="/pages/imgs/soucang.jpg"></image>
+          </view>
+          <view class="fristAddress" wx:for="{{likeList}}" wx:key="*this">
+              <view class="fristAddressLeft" >
+                <view class="leftText">
+                  <text>{{item.name}}</text>
+                  <text>\n</text>
+                  <text>{{item.address}}</text>
+                  <text>\n</text>
+                  <text>营业时间: {{item.beginTime}}-{{item.endTime}}</text> </view>
+                <view class="timeChance">
+                  <view>到店自取:</view>
+                  <radio-group bindchange="chance">
+
+                    <radio id="now" value="now" checked="checked"></radio>
+                    <label for="now">支付成功后店内取单</label>
+                    <text>\n</text>
+                    <view class="mid"></view>
+                    <view class="timePk">
+                      <picker mode="time" value="{{time}}" start="{{now}}" end="21:30" bindchange="bindTimeChange">
+                        <view class="picker">
+                          <radio id="after" value="{{time}}"></radio><label for="after">预约稍晚时间到店取单</label>
+                        </view>
+                      </picker>
+                    </view>
+                  </radio-group>
+                </view>
+              </view>
+              <view class="line"></view>
+              <view class="fristAddressRight">
+                <view class="distance">距离:{{item.distance}}km</view>
+                <view class="phone">
+                  <image src="/pages/imgs/电  话.svg"></image>
+                </view>
+                <view class="like"
+                data-theshop='{{item}}' bindtap="likeShop">
+                  <image src="/pages/imgs/心爱心.svg"></image>
+                </view>
+                <view class="address">
+                  <image src="/pages/imgs/地址.svg"></image>
+                </view>
+              </view>
+              <view class="button">
+                选择饮品
+              </view>
+            </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

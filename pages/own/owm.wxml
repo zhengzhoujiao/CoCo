@@ -1,0 +1,20 @@
+<view class="index">
+  <view class="nav">
+    <image class="userinfo" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <view class="userinfoname">{{userInfo.nickName}}</view>
+    <button class="synchronization" bindtap="updata" open-type="getUserInfo" bindgetuserinfo="getUserInfo">同步微信信息</button>
+  </view>
+  <view class="body">
+    <view class="line" wx:for="{{fun}}" wx:key="*this">
+      <view class="bodyMid">
+        <image src="{{item.iconfontSrc}}"></image>
+      </view>
+      <view class="bodyLeft">{{item.funName}}</view>
+      <view class="bodyRight">
+        <view class="iconfont icon-icon-arrow-right2-copy"></view>
+      </view>
+    </view>
+  </view>
+  <view class="bar">
+  </view>
+</view>

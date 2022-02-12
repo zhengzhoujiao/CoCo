@@ -1,0 +1,298 @@
+@import '/content/css/button.wxss';
+page{
+  background-color: #F1F1F1;
+}
+.nav image{
+  width: 100%;
+}
+.nav .headerAS{
+  width: 100%;
+  height: 130rpx;
+  background-color: white;
+}
+.nav .headerAS image{
+  width: 70rpx;
+  height: 70rpx;
+}
+.nav .headerAS .addressIcon{
+  display: inline-block;
+  margin-left: 30rpx;
+}
+.nav .headerAS .address{
+  display: inline-block;
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+}
+.nav .headerAS .address view:nth-child(2){
+  font-size: 14px;
+  color: gray;
+  margin-top: 10rpx;
+}
+.nav .headerAS .search{
+  float: right;
+  margin-top: 23rpx;
+  margin-right: 35rpx;
+}
+.body{
+  display: flex;
+}
+.body .bodyLeft{
+  flex:1;
+  font-size: 14px;
+  text-align: center;
+}
+.body .bodyLeft image{
+  margin-left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: 65rpx;
+  height: 65rpx;
+  padding-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+.body .bodyLeft scroll-view{
+  height: 875rpx;
+}
+.body .bodyLeft scroll-view view{
+  height: 180rpx;
+  background: white;
+}
+.body .bodyRight{
+  flex:4.5
+}
+.body .bodyRight scroll-view{
+  height: 800rpx;
+}
+.body .theCar{
+  position: fixed;
+  width: 90%;
+  margin-left: 5%;
+  height: 110rpx;
+  background: white;
+  bottom: 50rpx;
+  border-radius: 70rpx;
+  line-height: 110rpx;
+  z-index: 998;
+  box-shadow:  20px 20px 60px #d9d9d9, 
+             -20px -20px 60px #ffffff;
+}
+.body .theCar image{
+  top: -30rpx;
+  left: 75rpx;
+  position: absolute;
+  width: 75rpx;
+  height: 110rpx;
+}
+.body .theCar .qiu{
+  position: absolute;
+  width: 45rpx;
+  height: 45rpx;
+  font-size: 14px;
+  background: orange;
+  color: white;
+  text-align: center;
+  line-height: 45rpx;
+  border-radius: 22.5rpx;
+  left: 125rpx;
+  top: -55rpx;
+}
+.body .theCar .left{
+  margin-left: 160rpx;
+  font-size: 22px;
+  display: inline-block;
+}
+.body .theCar .right{
+  width: 28%;
+  height: 110rpx;
+  border-top-right-radius: 70rpx;
+  border-bottom-right-radius: 70rpx;
+  background: gray;
+  color: white;
+  float: right;
+  font-size: 18px;
+  text-align: center;
+}
+.card{
+  position: relative;
+  margin-top: 10rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 580rpx;
+  height: 260rpx;
+  background-image: url(data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAB6CAYAAABQtRgZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAERSURBVGhD7dPLDsFQFIXh8/4P41KmXsQtYWzgRIiW2PZxLdakXcdArMGXapb8baPCbrO23MJpu7LcFMUDQ1E8MBTFA0NRPDAUxQNDUTwwFMUDQ1E8MBTFA0NRPDAUxQNDUTwwFMUDQ1E8MBTFA0NRPDAUxQNDUTwwfi26exvI83CKS8stHOYDy82jQ/+Ql6J4YCiKB4aieGAoigfGd6LVrLBqNnhAX2oqVNOex/pWunSsX+Cq8C82u1jYT7q293B54XH3Gk3nKYwDSChT1KXjNVq8hdtEx51LsLpFD5PCju71bhs//vOx73faNnb38eu3DdX5e5rnNarTfx8PDEXxwFAUD4x/j5aLkeUWYoyWV7QzYhORn7tD+mwAAAAASUVORK5CYII=);
+  background-size:100% 100%
+}
+.card image{
+  display: inline-block;
+  margin-top: 30rpx;
+  width: 220rpx;
+  height: 220rpx;
+  margin-left: 15rpx;
+}
+.card .cardRight{
+  display: inline-block;
+}
+.card .cardRight view:nth-child(1){
+  font-size: 20px;
+  font-weight: 600;
+  width: 330rpx;
+  height: 90rpx;
+  text-align: right;
+  position: absolute;
+  top: 30rpx;
+}
+.card .cardRight view:nth-child(2){
+  position: absolute;
+  top: 90rpx;
+  right: 10rpx;
+}
+.card .cardRight view:nth-child(3){
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 24px;
+  right: 10rpx;
+  top: 180rpx;
+}
+.content{
+  width: 700rpx;
+  height: 1300rpx;
+}
+.content .bottom{
+  position: absolute;
+  width: 100%;
+  height: 200rpx;
+  bottom: 0;
+}
+.content .bottom .line{
+  width: 100%;
+  height: 2rpx;
+  background: whitesmoke;
+}
+.content .tofor{
+  width: 92%;
+  margin-left: 4%;
+  margin-top: 50rpx;
+  height: 200rpx;
+}
+.content .tofor .property{
+  font-size: 14px;
+  width: 20%;
+  margin-right: 5%;
+  display: inline-block;
+  height: 65rpx;
+  background: whitesmoke;
+  line-height: 65rpx;
+  text-align: center;
+  margin-top: 20rpx;
+}
+.contentTwo{
+  width: 700rpx;
+  height: 1000rpx;
+}
+.contentTwo .searchImage{
+  position: absolute;
+  width: 50rpx;
+  height: 50rpx;
+  top: 70rpx;
+  left: 60rpx;
+}
+.contentTwo .searchInput{
+  width: 67%;
+  margin-left: 5%;
+  height: 70rpx;
+  border-radius: 30rpx;
+  background: whitesmoke;
+  margin-top: 60rpx;
+  display: inline-block;
+  padding-left: 90rpx;
+  margin-right: 20rpx;
+}
+.contentTwo .txtSearch{
+  color: orange;
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 75rpx;
+}
+.bcard{
+  position: relative;
+  margin-top: 10rpx;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 400rpx;
+  background-image: url(data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAB6CAYAAABQtRgZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAERSURBVGhD7dPLDsFQFIXh8/4P41KmXsQtYWzgRIiW2PZxLdakXcdArMGXapb8baPCbrO23MJpu7LcFMUDQ1E8MBTFA0NRPDAUxQNDUTwwFMUDQ1E8MBTFA0NRPDAUxQNDUTwwFMUDQ1E8MBTFA0NRPDAUxQNDUTwwfi26exvI83CKS8stHOYDy82jQ/+Ql6J4YCiKB4aieGAoigfGd6LVrLBqNnhAX2oqVNOex/pWunSsX+Cq8C82u1jYT7q293B54XH3Gk3nKYwDSChT1KXjNVq8hdtEx51LsLpFD5PCju71bhs//vOx73faNnb38eu3DdX5e5rnNarTfx8PDEXxwFAUD4x/j5aLkeUWYoyWV7QzYhORn7tD+mwAAAAASUVORK5CYII=);
+  background-size:100% 100%
+}
+.bcard image{
+  display: inline-block;
+  margin-top: 30rpx;
+  width: 330rpx;
+  height: 330rpx;
+  margin-left: 15rpx;
+}
+.bcard .cardRight{
+  display: inline-block;
+}
+.bcard .cardRight view:nth-child(1){
+  font-size: 20px;
+  font-weight: 600;
+  width: 330rpx;
+  height: 100rpx;
+  text-align: right;
+  position: absolute;
+  top: 100rpx;
+}
+.bcard .cardRight view:nth-child(2){
+  position: absolute;
+  width: 50%;
+  right: 30rpx;
+  text-align: right;
+  top: 170rpx;
+}
+.carlist{
+  width: 92%;
+  margin-left: 4%;
+  border-bottom: 1px solid whitesmoke;
+  margin-top: 30rpx;
+  height: 150rpx;
+}
+.carlist .left{
+  text-align: left;
+  display: inline-block;
+}
+.carlist .left .title{
+  font-size: 14px;
+}
+.carlist .left .attr{
+  color: #d9d9d9;
+  font-size: 14px;
+  margin-top: 5rpx;
+}
+.carlist .left .price{
+  margin-top: 5rpx;
+}
+.carlist .right{
+  float: right;
+  text-align: right;
+  margin-top: 35rpx;
+}
+.carlist .right .jian{
+  display: inline-block;
+  margin-right: 20rpx;
+  font-size: larger;
+}
+.carlist .right .num{
+  display: inline-block;
+  margin-right: 20rpx;
+  font-size: larger;
+}
+.carlist .right .add{
+  display: inline-block;
+  margin-right: 15rpx;
+  font-size: larger;
+}
+.youChange{
+  margin-left: 4%;
+  margin-top: 40rpx;
+}
